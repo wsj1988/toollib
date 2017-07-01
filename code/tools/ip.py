@@ -71,6 +71,10 @@ if __name__ == '__main__':
     for ip in private_ips:
         result = is_private_ip(ip)
         assert result is True
+        result = is_public_ip(ip)
+        assert result is False
     for ip in public_ips:
         result = is_private_ip(ip)
         assert result is False
+        result = is_public_ip(ip)
+        assert result is True

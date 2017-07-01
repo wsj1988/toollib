@@ -26,6 +26,12 @@ def int_2_ip(int_ip):
 
 
 if __name__ == '__main__':
+    # legal branch
     str_ip = '192.168.44.17'
     int_ip = ip_2_int(str_ip)
     print int_ip
+    assert int_2_ip(int_ip) == str_ip
+    # illegal branch
+    illegal_ip = 'a.b.c.d'
+    assert ip_2_int(illegal_ip) is None
+    assert int_2_ip(-1) is None

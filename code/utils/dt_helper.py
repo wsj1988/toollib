@@ -18,10 +18,11 @@ def ts_2_str(ts_dt):
 
 
 if __name__ == '__main__':
+    # datetime from string to timestamp
     str_dt1 = time.strftime(FORMAT, time.localtime())
     ts1 = str_2_ts(str_dt1)
     print ts1
-
+    # datetime from timestamp to string
     ts2 = time.time()
     str_dt2 = ts_2_str(ts2)
     print str_dt2
